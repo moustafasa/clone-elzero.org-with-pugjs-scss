@@ -1,0 +1,7 @@
+mixin navDropDowns(mainUlClass,dropNameclass,childulClass)
+    ul(class=mainUlClass)
+        each childLis,dropName  in navObject 
+            li(class=dropNameclass) #[i] #{dropName}
+                ul(class=childulClass)
+                    each li,ic in childLis
+                        li #[i(class=ic)] #{li}

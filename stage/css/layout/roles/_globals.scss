@@ -1,0 +1,50 @@
+@use "../../helpers/mixins" as *;
+
+// start design roles
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+
+// start container roles
+.container {
+  @include one-value-more-properties(15px, padding-left, padding-right);
+  @include one-value-more-properties(auto, margin-left, margin-right);
+}
+
+/* Small */
+@include medias("more mobile") {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@include medias("more small") {
+  .container {
+    width: 970px;
+  }
+}
+@include medias("large") {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules  */
