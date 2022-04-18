@@ -3,5 +3,37 @@ mixin navDropDowns(mainUlClass,dropNameclass,childulClass)
         each childLis,dropName  in navObject 
             li(class=dropNameclass) #[i] #{dropName}
                 ul(class=childulClass)
-                    each li,ic in childLis
+                    each ic,li in childLis
                         li #[i(class=ic)] #{li}
+
+
+//- 
+    sections of index page
+    it consists of head
+    and divs that contains img
+    and head under img
+    and can has p under head
+    ////////////////////////
+    ////////////////////////
+    it take head as head name
+    and divs as object has each
+    img and its h3 and its p
+
+    divs ={
+        'img':[
+            'h3','p'
+        ]
+    }
+
+
+mixin indexSections(head,divs)
+    h3 #{head}
+    each HandParr,img in divs 
+        .box 
+            img(src=img, alt="")
+            h3 #{HandParr[0]}
+            if(HandParr[1])
+                p #{HandParr[1]}
+
+
+

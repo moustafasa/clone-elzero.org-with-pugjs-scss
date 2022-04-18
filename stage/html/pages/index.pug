@@ -3,16 +3,35 @@ append vars
     -title='mainPage'
 
 append styles 
-    link(rel="stylesheet", href="../css/index.css")
+    link(rel="stylesheet", href="../css/pages/index.css")
 
 
 append body 
     include ../components/header
-
-
-
-
-
+    .landing 
+        .container 
+            h2 welcome to elzero web school 
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo at magnam mousta fafda sdfjsf sfdjslf fsa jsf asf safsa
+            .input 
+                input(type="text" placeholder='search in academy')
+                button search 
+        .img
+    .roadmaps
+        .container 
+            +indexSections('roadmaps',roadmapSectionIndex)  
+    .front-end-applications
+        .container 
+            +indexSections('latest front-end applications',frontEndSectionIndex)
+    .latest-articles 
+        .container 
+            +indexSections('latest front-end applications',latestArticleSectionIndex)
+    .random-articles 
+        .container 
+            +indexSections('latest front-end applications',randomArticlesSectionIndex)
+    .features  
+        .container 
+            +indexSections('latest front-end applications',featuresSectionIndex)
+    
 
     include ../components/footer
 append scripts 

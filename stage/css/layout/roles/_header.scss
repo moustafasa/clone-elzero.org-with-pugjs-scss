@@ -1,0 +1,28 @@
+@use "../../helpers/mixins" as *;
+@use "../../variables/colors" as *;
+header {
+  &.scrolled {
+    background-color: rgba(34, 34, 34, 0.85);
+    color: white;
+  }
+  .container {
+    display: flex;
+    .logo {
+    }
+    .nav {
+      flex: 1;
+      display: flex;
+      i {
+      }
+      .dropName {
+        .childmenu {
+          display: none;
+          li {
+            i {
+            }
+          }
+        }
+      }
+    }
+  }
+}
